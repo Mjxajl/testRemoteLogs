@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST RL</title>
+    <script src="./reconsole.js" id="consolerescript"></script>
+</head>
+<body>
+    <form id = "logsform">
+    <input id="servername" type="text">
+    <button> Send log</button>    
+    </form>
+    <script>
+        let server = null
+        const form  = document.getElementById('logsform')
+        const input = document.getElementById('servername')
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault()
+            if(server === null){
+                server = input.value
+                console.re.connect({
+    server: servet,
+    channel: 'testRL',
+})
+            }
+
+          console.re.log('SENDING LOGS !!!!!!!!!!!!!!!!!!!')  
+        })
+    </script>
+
+</body>
+</html>
